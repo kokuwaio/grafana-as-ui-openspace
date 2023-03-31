@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  gateway:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./conf:/app/conf
+    environment:
+      - GATEWAY_CONFIG=conf/appsettings.keycloak.json
+      - Logging__Console__FormatterName=Simple
+  
