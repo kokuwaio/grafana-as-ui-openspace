@@ -1,7 +1,7 @@
 version: '3'
 services:
   grafana:
-    image: grafana/grafana:9.4.7
+    image: kokuwa/grafana-as-ui-openspace:latest
     ports:
       - "3000:3000"
     volumes:
