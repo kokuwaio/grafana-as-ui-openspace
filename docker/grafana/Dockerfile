@@ -42,7 +42,7 @@ COPY --chown=grafana:root provisioning $GF_PATHS_PROVISIONING
 USER root
 
 ## Replace Favicon
-COPY images/favicon-32x32.png /usr/share/grafana/public/img
+COPY images/favicon-32x32.png /usr/share/grafana/public/img/fav32.png
 
 ## Replace Logo
 COPY images/inoa_logo.svg /usr/share/grafana/public/img/grafana_icon.svg
