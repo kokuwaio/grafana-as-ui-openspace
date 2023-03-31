@@ -47,6 +47,9 @@ COPY images/favicon-32x32.png /usr/share/grafana/public/img/fav32.png
 ## Replace Logo
 COPY images/inoa_logo.svg /usr/share/grafana/public/img/grafana_icon.svg
 
+# Inoa Images
+COPY images/satellite.jpg /usr/share/grafana/public/img/bg/satellite.jpg
+
 ## Update Background
 #COPY img/background.svg /usr/share/grafana/public/img/g8_login_dark.svg
 #COPY img/background.svg /usr/share/grafana/public/img/g8_login_light.svg
@@ -84,6 +87,7 @@ RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|("nav.searc
 
 RUN grafana-cli plugins install marcusolsson-json-datasource
 RUN grafana-cli plugins install yesoreyeram-infinity-datasource
+RUN grafana-cli plugins install volkovlabs-form-panel
 
 
 USER grafana
