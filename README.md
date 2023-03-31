@@ -12,3 +12,12 @@ OpenSpace session to determine the usage of Grafana as a real world frontend to 
 ### Negative
 
 - Man muss beim Update von Grafana ggf. die Whitelabeling Arbeit nachmal machen
+
+
+## TODO
+
+- Tabelle mit Einträgen der Gateways
+- Klick auf Tabelleneintrag führt zur Detailsseite der Gateways
+- Detailseite:
+  - Labels anschauen
+  - Gerät aufmalen mit Canvas und Zähler auflisten am Gerät
