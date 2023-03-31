@@ -1,4 +1,4 @@
-FROM grafana/grafana:9.4.3
+FROM grafana/grafana:9.4.7
 
 ## Set Grafana options
 ENV GF_ENABLE_GZIP=true
@@ -81,6 +81,10 @@ RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|({target:"_
 ## Update Search Place holder in the Top Navigation
 RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|("nav.search.placeholder","Search Grafana")|("nav.search.placeholder","Search")|g' {} \;
 ##################################################################
+
+RUN grafana-cli plugins install marcusolsson-json-datasource
+RUN grafana-cli plugins install yesoreyeram-infinity-datasource
+
 
 USER grafana
 

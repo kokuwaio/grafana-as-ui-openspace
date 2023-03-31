@@ -1,8 +1,8 @@
 version: '3'
 services:
   grafana:
-    image: kokuwa/grafana-as-ui-openspace:latest
-    build: docker/grafana/
+    build:
+      context: ./docker/grafana
     ports:
       - "3000:3000"
     volumes:
