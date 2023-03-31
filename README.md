@@ -6,3 +6,9 @@ OpenSpace session to determine the usage of Grafana as a real world frontend to 
 - Theming / Whitelabeling?
 - Authentication?
 - Referenz: Gatewayregistry bauen auf Basis der Inoa API
+
+## Findings
+
+### Negative
+
+- Man muss beim Update von Grafana ggf. die Whitelabeling Arbeit nachmal machen

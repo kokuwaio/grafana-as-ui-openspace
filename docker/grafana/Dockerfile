@@ -20,7 +20,7 @@ ENV GF_ALERTING_ENABLED=false
 ENV GF_UNIFIED_ALERTING_ENABLED=false
 
 ## Set Home Dashboard
-ENV GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/news.json
+ENV GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/gateways.json
 
 ## Paths
 ENV GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
@@ -51,9 +51,6 @@ COPY images/inoa_logo.svg /usr/share/grafana/public/img/grafana_icon.svg
 #COPY img/background.svg /usr/share/grafana/public/img/g8_login_dark.svg
 #COPY img/background.svg /usr/share/grafana/public/img/g8_login_light.svg
 
-## Update Main Org. to Volkov Labs
-## Anonymous authentication will stop working as set for Main Org. by default
-RUN sed -i 's|Main Org.|Inoa|g' /usr/share/grafana/bin/grafana-server
 
 ## Update Help menu
 RUN sed -i "s|\[\[.NavTree\]\],|nav,|g; \
@@ -64,10 +61,10 @@ RUN sed -i "s|\[\[.NavTree\]\],|nav,|g; \
     /usr/share/grafana/public/views/index.html
 
 ## Update Title
-RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|AppTitle="Grafana"|AppTitle="Volkov Labs"|g' {} \;
+RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|"AppTitle","Grafana")|"AppTitle","Inoa")|g' {} \;
 
 ## Update Login Title
-RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|LoginTitle="Welcome to Grafana"|LoginTitle="Welcome to Volkov Labs"|g' {} \;
+RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|LoginTitle="Welcome to Grafana"|LoginTitle="Welcome to Inoa"|g' {} \;
 
 ## Remove Documentation, Support, Community in the Footer
 RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' {} \;
