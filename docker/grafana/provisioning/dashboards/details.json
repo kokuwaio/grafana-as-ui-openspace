@@ -1,455 +1,545 @@
 {
-  "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": {
-          "type": "grafana",
-          "uid": "-- Grafana --"
-        },
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "target": {
-          "limit": 100,
-          "matchAny": false,
-          "tags": [],
-          "type": "dashboard"
-        },
-        "type": "dashboard"
-      }
-    ]
-  },
-  "editable": true,
-  "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
-  "id": 2,
-  "links": [],
-  "liveNow": false,
-  "panels": [
-    {
-      "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "VQguoqfVk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "true": {
-                  "index": 0,
-                  "text": "Enabled"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 11,
-        "x": 0,
-        "y": 0
-      },
-      "id": 2,
-      "options": {
-        "inlineEditing": true,
-        "root": {
-          "background": {
-            "color": {
-              "fixed": "transparent"
-            },
-            "image": {
-              "fixed": "img/bg/satellite.jpg"
-            },
-            "size": "cover"
-          },
-          "border": {
-            "color": {
-              "fixed": "dark-green"
-            }
-          },
-          "constraint": {
-            "horizontal": "left",
-            "vertical": "top"
-          },
-          "elements": [
-            {
-              "background": {
-                "color": {
-                  "field": "enabled",
-                  "fixed": "#D9D9D9"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 20,
-                "text": {
-                  "field": "enabled",
-                  "fixed": "",
-                  "mode": "field"
-                },
-                "valign": "middle"
-              },
-              "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "name": "Element 1",
-              "placement": {
-                "height": 42,
-                "left": 12,
-                "top": 65,
-                "width": 287
-              },
-              "type": "metric-value"
-            },
-            {
-              "background": {
-                "color": {
-                  "field": "gateway_id",
-                  "fixed": "#D9D9D9"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 20,
-                "text": {
-                  "field": "gateway_id",
-                  "fixed": "",
-                  "mode": "field"
-                },
-                "valign": "middle"
-              },
-              "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "name": "Element 2",
-              "placement": {
-                "height": 42,
-                "left": 13,
-                "top": 14,
-                "width": 288
-              },
-              "type": "metric-value"
-            },
-            {
-              "background": {
-                "color": {
-                  "field": "created",
-                  "fixed": "#D9D9D9"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 20,
-                "text": {
-                  "field": "created",
-                  "fixed": "",
-                  "mode": "field"
-                },
-                "valign": "middle"
-              },
-              "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "name": "Element 3",
-              "placement": {
-                "height": 42,
-                "left": 11,
-                "top": 118,
-                "width": 288
-              },
-              "type": "metric-value"
-            }
-          ],
-          "name": "Element 1680265128146",
-          "placement": {
-            "height": 100,
-            "left": 0,
-            "top": 0,
-            "width": 100
-          },
-          "type": "frame"
-        },
-        "showAdvancedTypes": false
-      },
-      "pluginVersion": "9.4.7",
-      "targets": [
-        {
-          "columns": [],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "VQguoqfVk"
-          },
-          "filters": [],
-          "format": "dataframe",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "A",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "https://api.inoa.io/api/gateway-registry/gateways/$gateway_id",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        }
-      ],
-      "title": "Details",
-      "type": "canvas"
-    },
-    {
-      "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "VQguoqfVk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 13,
-        "x": 11,
-        "y": 0
-      },
-      "id": 4,
-      "options": {
-        "basemap": {
-          "config": {},
-          "name": "Layer 0",
-          "type": "osm-standard"
-        },
-        "controls": {
-          "mouseWheelZoom": true,
-          "showAttribution": true,
-          "showDebug": false,
-          "showMeasure": false,
-          "showScale": false,
-          "showZoom": true
-        },
-        "layers": [
-          {
-            "config": {
-              "showLegend": true,
-              "style": {
-                "color": {
-                  "fixed": "dark-green"
-                },
-                "opacity": 0.4,
-                "rotation": {
-                  "fixed": 0,
-                  "max": 360,
-                  "min": -360,
-                  "mode": "mod"
-                },
-                "size": {
-                  "fixed": 5,
-                  "max": 15,
-                  "min": 2
-                },
-                "symbol": {
-                  "fixed": "img/icons/marker/cross.svg",
-                  "mode": "fixed"
-                },
-                "text": {
-                  "field": "gateway_id",
-                  "fixed": "",
-                  "mode": "field"
-                },
-                "textConfig": {
-                  "fontSize": 12,
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "textAlign": "center",
-                  "textBaseline": "middle"
-                }
-              }
-            },
-            "location": {
-              "latitude": "lat",
-              "longitude": "log",
-              "mode": "coords"
-            },
-            "name": "Gateways",
-            "tooltip": true,
-            "type": "markers"
-          }
-        ],
-        "tooltip": {
-          "mode": "details"
-        },
-        "view": {
-          "allLayers": true,
-          "id": "coords",
-          "lat": 51.016227,
-          "lon": 9.362481,
-          "zoom": 4.82
-        }
-      },
-      "pluginVersion": "9.4.7",
-      "targets": [
-        {
-          "columns": [],
-          "data": "[\n    {\n        \"gateway_id\": \"$gateway_id\",\n        \"lat\": 51.0614957,\n        \"log\": 13.7522997\n    }\n]",
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "VQguoqfVk"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "refId": "A",
-          "root_selector": "",
-          "source": "inline",
-          "type": "json",
-          "url": "https://github.com/yesoreyeram/grafana-infinity-datasource/blob/main/testdata/users.json",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        }
-      ],
-      "title": "Location",
-      "type": "geomap"
-    }
-  ],
-  "refresh": "",
-  "revision": 1,
-  "schemaVersion": 38,
-  "style": "dark",
-  "tags": [],
-  "templating": {
-    "list": [
-      {
-        "current": {
-          "selected": false,
-          "text": "ISRL01-34865DB51F5C",
-          "value": "ISRL01-34865DB51F5C"
-        },
-        "datasource": {
-          "type": "yesoreyeram-infinity-datasource",
-          "uid": "VQguoqfVk"
-        },
-        "definition": "Infinity- (infinity) json",
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "gateway_id",
-        "options": [],
-        "query": {
-          "infinityQuery": {
-            "columns": [
-              {
-                "selector": "gateway_id",
-                "text": "gateway_id",
-                "type": "string"
-              }
-            ],
-            "filters": [],
-            "format": "table",
-            "refId": "variable",
-            "root_selector": "",
-            "source": "url",
-            "type": "json",
-            "url": "https://api.inoa.io/api/gateway-registry/gateways",
-            "url_options": {
-              "data": "",
-              "method": "GET"
-            }
-          },
-          "query": "",
-          "queryType": "infinity"
-        },
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "type": "query"
-      }
-    ]
-  },
-  "time": {
-    "from": "now-6h",
-    "to": "now"
-  },
-  "timepicker": {},
-  "timezone": "",
-  "title": "GatewayDetail",
-  "uid": "j9mHbqB4z",
-  "version": 7,
-  "weekStart": ""
+	"annotations": {
+		"list": [
+			{
+				"builtIn": 1,
+				"datasource": {
+					"type": "grafana",
+					"uid": "-- Grafana --"
+				},
+				"enable": true,
+				"hide": true,
+				"iconColor": "rgba(0, 211, 255, 1)",
+				"name": "Annotations & Alerts",
+				"target": {
+					"limit": 100,
+					"matchAny": false,
+					"tags": [],
+					"type": "dashboard"
+				},
+				"type": "dashboard"
+			}
+		]
+	},
+	"editable": true,
+	"fiscalYearStartMonth": 0,
+	"graphTooltip": 0,
+	"links": [],
+	"liveNow": false,
+	"panels": [
+		{
+			"datasource": {
+				"type": "yesoreyeram-infinity-datasource",
+				"uid": "VQguoqfVk"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"mappings": [
+						{
+							"options": {
+								"true": {
+									"index": 0,
+									"text": "Enabled"
+								}
+							},
+							"type": "value"
+						}
+					],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 10,
+				"w": 11,
+				"x": 0,
+				"y": 0
+			},
+			"id": 2,
+			"options": {
+				"inlineEditing": true,
+				"root": {
+					"background": {
+						"color": {
+							"fixed": "transparent"
+						},
+						"image": {
+							"fixed": "img/bg/satellite.jpg"
+						},
+						"size": "cover"
+					},
+					"border": {
+						"color": {
+							"fixed": "dark-green"
+						}
+					},
+					"constraint": {
+						"horizontal": "left",
+						"vertical": "top"
+					},
+					"elements": [
+						{
+							"background": {
+								"color": {
+									"field": "enabled",
+									"fixed": "#D9D9D9"
+								}
+							},
+							"border": {
+								"color": {
+									"fixed": "dark-green"
+								}
+							},
+							"config": {
+								"align": "center",
+								"color": {
+									"fixed": "#000000"
+								},
+								"size": 20,
+								"text": {
+									"field": "enabled",
+									"fixed": "",
+									"mode": "field"
+								},
+								"valign": "middle"
+							},
+							"constraint": {
+								"horizontal": "left",
+								"vertical": "top"
+							},
+							"name": "Element 1",
+							"placement": {
+								"height": 42,
+								"left": 12,
+								"top": 65,
+								"width": 287
+							},
+							"type": "metric-value"
+						},
+						{
+							"background": {
+								"color": {
+									"field": "gateway_id",
+									"fixed": "#D9D9D9"
+								}
+							},
+							"border": {
+								"color": {
+									"fixed": "dark-green"
+								}
+							},
+							"config": {
+								"align": "center",
+								"color": {
+									"fixed": "#000000"
+								},
+								"size": 20,
+								"text": {
+									"field": "gateway_id",
+									"fixed": "",
+									"mode": "field"
+								},
+								"valign": "middle"
+							},
+							"constraint": {
+								"horizontal": "left",
+								"vertical": "top"
+							},
+							"name": "Element 2",
+							"placement": {
+								"height": 42,
+								"left": 13,
+								"top": 14,
+								"width": 288
+							},
+							"type": "metric-value"
+						},
+						{
+							"background": {
+								"color": {
+									"field": "created",
+									"fixed": "#D9D9D9"
+								}
+							},
+							"border": {
+								"color": {
+									"fixed": "dark-green"
+								}
+							},
+							"config": {
+								"align": "center",
+								"color": {
+									"fixed": "#000000"
+								},
+								"size": 20,
+								"text": {
+									"field": "created",
+									"fixed": "",
+									"mode": "field"
+								},
+								"valign": "middle"
+							},
+							"constraint": {
+								"horizontal": "left",
+								"vertical": "top"
+							},
+							"name": "Element 3",
+							"placement": {
+								"height": 42,
+								"left": 11,
+								"top": 118,
+								"width": 288
+							},
+							"type": "metric-value"
+						}
+					],
+					"name": "Element 1680265128146",
+					"placement": {
+						"height": 100,
+						"left": 0,
+						"top": 0,
+						"width": 100
+					},
+					"type": "frame"
+				},
+				"showAdvancedTypes": false
+			},
+			"pluginVersion": "9.4.7",
+			"targets": [
+				{
+					"columns": [],
+					"datasource": {
+						"type": "yesoreyeram-infinity-datasource",
+						"uid": "VQguoqfVk"
+					},
+					"filters": [],
+					"format": "dataframe",
+					"global_query_id": "",
+					"parser": "backend",
+					"refId": "A",
+					"root_selector": "",
+					"source": "url",
+					"type": "json",
+					"url": "https://api.inoa.io/api/gateway-registry/gateways/$gateway_id",
+					"url_options": {
+						"data": "",
+						"method": "GET"
+					}
+				}
+			],
+			"title": "Details",
+			"type": "canvas"
+		},
+		{
+			"datasource": {
+				"type": "yesoreyeram-infinity-datasource",
+				"uid": "VQguoqfVk"
+			},
+			"fieldConfig": {
+				"defaults": {
+					"color": {
+						"mode": "thresholds"
+					},
+					"custom": {
+						"hideFrom": {
+							"legend": false,
+							"tooltip": false,
+							"viz": false
+						}
+					},
+					"mappings": [],
+					"thresholds": {
+						"mode": "absolute",
+						"steps": [
+							{
+								"color": "green",
+								"value": null
+							},
+							{
+								"color": "red",
+								"value": 80
+							}
+						]
+					}
+				},
+				"overrides": []
+			},
+			"gridPos": {
+				"h": 10,
+				"w": 13,
+				"x": 11,
+				"y": 0
+			},
+			"id": 4,
+			"options": {
+				"basemap": {
+					"config": {},
+					"name": "Layer 0",
+					"type": "osm-standard"
+				},
+				"controls": {
+					"mouseWheelZoom": true,
+					"showAttribution": true,
+					"showDebug": false,
+					"showMeasure": false,
+					"showScale": false,
+					"showZoom": true
+				},
+				"layers": [
+					{
+						"config": {
+							"showLegend": true,
+							"style": {
+								"color": {
+									"fixed": "dark-green"
+								},
+								"opacity": 0.4,
+								"rotation": {
+									"fixed": 0,
+									"max": 360,
+									"min": -360,
+									"mode": "mod"
+								},
+								"size": {
+									"fixed": 5,
+									"max": 15,
+									"min": 2
+								},
+								"symbol": {
+									"fixed": "img/icons/marker/cross.svg",
+									"mode": "fixed"
+								},
+								"text": {
+									"field": "gateway_id",
+									"fixed": "",
+									"mode": "field"
+								},
+								"textConfig": {
+									"fontSize": 12,
+									"offsetX": 0,
+									"offsetY": 0,
+									"textAlign": "center",
+									"textBaseline": "middle"
+								}
+							}
+						},
+						"location": {
+							"latitude": "lat",
+							"longitude": "log",
+							"mode": "coords"
+						},
+						"name": "Gateways",
+						"tooltip": true,
+						"type": "markers"
+					}
+				],
+				"tooltip": {
+					"mode": "details"
+				},
+				"view": {
+					"allLayers": true,
+					"id": "coords",
+					"lat": 51.016227,
+					"lon": 9.362481,
+					"zoom": 4.82
+				}
+			},
+			"pluginVersion": "9.4.7",
+			"targets": [
+				{
+					"columns": [],
+					"data": "[\n    {\n        \"gateway_id\": \"$gateway_id\",\n        \"lat\": 51.0614957,\n        \"log\": 13.7522997\n    }\n]",
+					"datasource": {
+						"type": "yesoreyeram-infinity-datasource",
+						"uid": "VQguoqfVk"
+					},
+					"filters": [],
+					"format": "table",
+					"global_query_id": "",
+					"refId": "A",
+					"root_selector": "",
+					"source": "inline",
+					"type": "json",
+					"url": "https://github.com/yesoreyeram/grafana-infinity-datasource/blob/main/testdata/users.json",
+					"url_options": {
+						"data": "",
+						"method": "GET"
+					}
+				}
+			],
+			"title": "Location",
+			"type": "geomap"
+		},
+		{
+			"datasource": {
+				"type": "yesoreyeram-infinity-datasource",
+				"uid": "VQguoqfVk"
+			},
+			"gridPos": {
+				"h": 8,
+				"w": 24,
+				"x": 0,
+				"y": 10
+			},
+			"id": 6,
+			"options": {
+				"buttonGroup": {
+					"orientation": "center",
+					"size": "md"
+				},
+				"elements": [
+					{
+						"id": "gateway_id",
+						"labelWidth": 10,
+						"section": "",
+						"title": "gateway_id",
+						"tooltip": "",
+						"type": "disabled"
+					}
+				],
+				"initial": {
+					"code": "setInitial({ value: series[0].meta.custom.data.gateway_id, name: \"gateway_id\" });\n\n\n",
+					"contentType": "application/json",
+					"highlight": false,
+					"highlightColor": "red",
+					"method": "-"
+				},
+				"layout": {
+					"padding": 10,
+					"variant": "single"
+				},
+				"reset": {
+					"backgroundColor": "purple",
+					"foregroundColor": "yellow",
+					"icon": "process",
+					"text": "Reset",
+					"variant": "hidden"
+				},
+				"submit": {
+					"backgroundColor": "purple",
+					"foregroundColor": "yellow",
+					"icon": "cloud-upload",
+					"text": "Submit",
+					"variant": "primary"
+				},
+				"update": {
+					"code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload();\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
+					"confirm": false,
+					"contentType": "application/json",
+					"method": "-",
+					"updatedOnly": false
+				}
+			},
+			"targets": [
+				{
+					"columns": [
+						{
+							"selector": "gateway_id",
+							"text": "gateway_id",
+							"type": "string"
+						}
+					],
+					"datasource": {
+						"type": "yesoreyeram-infinity-datasource",
+						"uid": "VQguoqfVk"
+					},
+					"filters": [],
+					"format": "dataframe",
+					"global_query_id": "",
+					"parser": "backend",
+					"refId": "A",
+					"root_selector": "",
+					"source": "url",
+					"type": "json",
+					"url": "https://api.inoa.io/api/gateway-registry/gateways/$gateway_id",
+					"url_options": {
+						"data": "",
+						"method": "GET"
+					}
+				}
+			],
+			"title": "Panel Title",
+			"type": "volkovlabs-form-panel"
+		}
+	],
+	"refresh": "",
+	"revision": 1,
+	"schemaVersion": 38,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+		"list": [
+			{
+				"current": {
+					"selected": false,
+					"text": "ISRL01-34865DB51F5C",
+					"value": "ISRL01-34865DB51F5C"
+				},
+				"datasource": {
+					"type": "yesoreyeram-infinity-datasource",
+					"uid": "VQguoqfVk"
+				},
+				"definition": "Infinity- (infinity) json",
+				"hide": 0,
+				"includeAll": false,
+				"multi": false,
+				"name": "gateway_id",
+				"options": [],
+				"query": {
+					"infinityQuery": {
+						"columns": [
+							{
+								"selector": "gateway_id",
+								"text": "gateway_id",
+								"type": "string"
+							}
+						],
+						"filters": [],
+						"format": "table",
+						"refId": "variable",
+						"root_selector": "",
+						"source": "url",
+						"type": "json",
+						"url": "https://api.inoa.io/api/gateway-registry/gateways",
+						"url_options": {
+							"data": "",
+							"method": "GET"
+						}
+					},
+					"query": "",
+					"queryType": "infinity"
+				},
+				"refresh": 1,
+				"regex": "",
+				"skipUrlSync": false,
+				"sort": 0,
+				"type": "query"
+			}
+		]
+	},
+	"time": {
+		"from": "now-6h",
+		"to": "now"
+	},
+	"timepicker": {},
+	"timezone": "",
+	"title": "GatewayDetail",
+	"uid": "j9mHbqB4z",
+	"version": 1,
+	"weekStart": ""
 }
